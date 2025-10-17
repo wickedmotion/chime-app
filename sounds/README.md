@@ -13,7 +13,12 @@ Naming Conventions:
 - end-sound.wav // personal vistory sound
 - long-start-sound.wav // preferably to use a longer sound
 
-When you do not replace these sounds with the right naming you get these errors in the console (Inspector in browser):
+HAVE FUN!!! Stay Focussed, Call up your motivation by audio and visual cues.
+
+Kind regards, wickedmotion
+
+
+Note* When you do not replace these sounds with the right naming you get these errors in the console (Inspector in browser):
 
 Announcing sound setting: The current sound setting is now simple.
 GET file:///D:/Downloads_2024/Chime%20App/sounds/simple-bleep.mp3 net::ERR_FILE_NOT_FOUNDUnderstand this error
@@ -34,7 +39,4 @@ index.html:1 Uncaught (in promise) NotSupportedError: Failed to load because no 
 sounds/long-start-sound.wav:1  GET file:///D:/Downloads_2024/Chime%20App/sounds/long-start-sound.wav net::ERR_FILE_NOT_FOUNDUnderstand this error
 index.html:1 Uncaught (in promise) NotSupportedError: Failed to load because no supported source was found.
 
-HAVE FUN!!! Stay Focussed, Call up your motivation by audio and visual cues.
 
-
-Kind regards, wickedmotion
