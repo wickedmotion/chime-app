@@ -9,9 +9,9 @@ Naming Conventions:
 - simple-bleep.mp3
 - bell.mp3
 
-- start-sound.wav
-- end-sound.wav
-- long-start-sound.wav
+- start-sound.wav // preferably to use a shorter sound
+- end-sound.wav // personal vistory sound
+- long-start-sound.wav // preferably to use a longer sound
 
 When you do not replace these sounds with the right naming you get these errors in the console (Inspector in browser):
 
@@ -35,5 +35,6 @@ sounds/long-start-sound.wav:1  GET file:///D:/Downloads_2024/Chime%20App/sounds/
 index.html:1 Uncaught (in promise) NotSupportedError: Failed to load because no supported source was found.
 
 HAVE FUN!!! Stay Focussed, Call up your motivation by audio and visual cues.
+
 
 Kind regards, wickedmotion
