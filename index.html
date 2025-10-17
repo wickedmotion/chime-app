@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chime App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="news-ticker-container">
+        <div id="news-ticker" tabindex="0"> News Banner | Current Focus | Do Not Forget </div>
+    </div>
+    <div class="chime-settings">
+        <div class="setting">
+            <span class="label">chime</span>
+            <span class="option" id="interval" onclick="cycleInterval()">on the hour</span>
+        </div>
+        <div class="setting">
+            <span class="label">from</span>
+            <span class="option" id="start-time" onclick="cycleStartTime()">1 am</span>
+        </div>
+        <div class="setting">
+            <span class="label">till</span>
+            <span class="option" id="end-time" onclick="cycleEndTime()">1 am</span>
+        </div>
+        <div class="setting">
+            <span class="label">using</span>
+            <span class="option" id="sound-choice" onclick="cycleSound()">a simple beep</span>
+        </div>
+        <div class="setting toggle">
+            <span class="label bell-icon" id="bell-icon">🔔</span>
+            <span class="toggle-option active" id="on-toggle" onclick="toggleChime()">on</span> |
+            <span class="toggle-option" id="off-toggle" onclick="toggleChime()">off</span>
+        </div>
+        <div class="setting buttons">
+            <button onclick="playStartSound()">Start</button>
+            <button onclick="playEndSound()">End</button>
+            <button onclick="playLongStartSound()">Long Start</button>
+        </div>
+
+        <!-- <div class="side-tabs">
+            Future Additions
+        </div> -->
+
+
+        <div id="audio-progress-container">
+            <div id="audio-progress-bar"></div>
+        </div>
+    </div>
+
+    <script src="chime.js"></script>
+</body>
+</html>

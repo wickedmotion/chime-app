@@ -1,0 +1,215 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Back Buttons */
+.back-button {
+        position: absolute;
+        top: 80px;
+        left: 20px;
+        background-color: #4f7b2e;
+        color: #a6d37b;
+        padding: 14px 30px;
+        border-radius: 999px;
+        font-size: 2rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s;
+}
+
+.back-button:hover {
+        background-color: #6e9f4a;
+}
+
+/* Body and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #10120e;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Chime settings styling */
+.chime-settings {
+    text-align: left;
+    font-size: 6rem;
+    color: #1a2114;
+}
+
+/* Optional transition for smooth enabling/disabling effect */
+.setting, .label {
+    transition: opacity 0.3s ease;
+    font-weight: bold;
+}
+
+.setting .option {
+    cursor: pointer;
+    color: #4f7b2e;
+    padding-left: 10px;
+}
+
+.toggle-option.active {
+    color: #2d5520;
+    font-weight: bold;
+}
+
+.toggle-option {
+    cursor: pointer;
+    color: #12180e;
+}
+
+/* Disabled state */
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.bell-icon {
+    font-size: 6rem;
+    transition: opacity 0.3s ease;
+}
+
+/* Start/End button/Long Start container */
+.setting.buttons {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 2rem;
+}
+
+/* Start/End/Long Start buttons */
+.setting.buttons button {
+    padding: 12px 30px;
+    margin: 0 20px 0 0;
+    text-align: center;
+    font-size: 6rem;
+    font-weight: bold;
+    color: #4f7b2e;
+    background-color: transparent;
+    border: 3px solid #4f7b2e;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    user-select: none;
+}
+
+/* Hover and active states */
+.setting.buttons button:hover {
+    background-color: #4f7b2e;
+    color: #a6d37b;
+}
+
+.setting.buttons button:active {
+    transform: scale(0.95);
+}
+
+.side-tabs {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 1001;
+}
+
+.tab-button {
+    text-decoration: none;
+    background-color: #4f7b2e;
+    color: #a6d37b;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 180px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.tab-button:hover {
+    background-color: #6e9f4a;
+    transform: scale(1.05);
+}
+
+/* Breaking News Ticker */
+#news-ticker-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4b7f24;
+    overflow: hidden;
+    height: 40px;
+    line-height: 40px;
+    z-index: 1000;
+    user-select: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #131a0d;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#news-ticker {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 100%;
+    animation: ticker-scroll 20s linear infinite;
+    cursor: pointer;
+    outline: none;
+}
+
+@keyframes ticker-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#news-ticker.editing {
+    animation: none;
+    padding-left: 10px;
+    cursor: text;
+    user-select: text;
+}
+
+#news-ticker input {
+    font-size: 1.4rem;
+    background-color: #4f7b2e;
+    color: #a6d37b;
+    border: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+/* Audio Progress Bar */
+#audio-progress-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#audio-progress-bar {
+    height: 100%;
+    width: 100%;
+    background: #4f7b2e;
+    transition: width 0.1s linear;
+    transform-origin: right;
+    transform: scaleX(1);
+}
